@@ -7,10 +7,12 @@ class OneTimePad:
 	
 	def __init__ (self):
 		""" Class initialiser """
-		with open("dropbox/msg.txt", 'r') as data:
-			self.msg = data.read()
-			data.close()
-
+		try:
+			with open("dropbox/msg.txt", 'r') as data:
+				self.msg = data.read()
+				data.close()
+		except:
+			print 'no msg.txt file'
 	def encrypt (self):
 		""" Our encryption function. """
 		key = []
