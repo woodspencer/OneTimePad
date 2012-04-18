@@ -18,7 +18,7 @@ class OneTimePad:
 		secret_message = []
 		
 		for i in range(len(self.msg)):
-			key.append(random.randint(1,52))
+			key.append(random.randint(0,99))
 			offset.append(ord(self.msg[i])+key[-1])
 			secret_message.append(chr(offset[i]))
 			key[i] = str(key[i])
