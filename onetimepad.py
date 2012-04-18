@@ -28,7 +28,6 @@ class OneTimePad:
 				key[i] = '0'+key[i]
 				
 		key = ''.join(key)
-		print key
 		secret_message = ''.join(secret_message)
 		
 		with open("dropbox/key.txt", 'w') as data:
